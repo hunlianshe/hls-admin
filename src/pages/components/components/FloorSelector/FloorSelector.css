@@ -1,0 +1,33 @@
+.FloorSelector {
+  position: absolute;
+  width: 80px;
+  height: 195px;
+  background: var(--lzcBg-info-box);
+  top: 243px;
+  left: 298px;
+  padding: 12px;
+  border:1px solid #86b1d94d;
+
+  .floorNoContainer{
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+
+
+    ul{
+      padding: 0;
+    }
+    ul li{
+      padding: 0 5px;
+      cursor:pointer;
+      /*border-radius: 20px;*/
+      margin-right: 2px;
+      border-left: 2px solid transparent;
+    }
+    ul li:hover{
+      /*background-color: #40a9ff8a;*/
+      transition:border-left 0.1s;
+      border-left: 2px solid #40a9ff;
+    }
+  }
+}

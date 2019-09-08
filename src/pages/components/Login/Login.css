@@ -1,0 +1,58 @@
+
+.Login {
+  background: #080618;
+  width: 100%;
+  height: 100vh;
+
+  .head-img {
+    text-align: center;
+    /* padding-top: 132px; */
+    padding-top: 60px;
+    padding-bottom: 48px;
+
+    img {
+      width: 100px;
+    }
+  }
+
+  .title {
+    text-align: center;
+    font-size: 24px;
+    /* margin-bottom: 135px; */
+    margin-bottom: 60px;
+    color: #ffffff;
+  }
+
+  .login-box{
+    width: 300px;
+    margin: auto;
+
+    .ant-form-item {
+      /* margin-bottom: 36px; */
+    }
+
+    input {
+      height: 32px;
+      background: #080618;
+      color: #ffffff;
+    }
+
+    button {
+      width: 100%;
+    }
+
+    .flex-hrz {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      color:#FFFFFF;
+
+      .register {
+        flex: 1;
+        color: #1890FF;
+        cursor: pointer;
+      }
+    }
+  }
+
+}

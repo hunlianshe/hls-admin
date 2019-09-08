@@ -1,0 +1,36 @@
+.TimeBox {
+  height: 40px;
+  /*right: 0;*/
+  text-align: center;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 40px;
+  float: left;
+  position: relative;
+  font-family: 'timeFont', Fallback, sans-serif;
+
+  span {
+    padding: 0 5px;
+  }
+}
+.profileIcon{
+  width: 28px;
+  height: 28px;
+  border-radius: 3px;
+  background: rgba(255,255,255,0.2);
+  color: white;
+  position: relative;
+  display: block;
+  float: right;
+  text-align: center;
+  line-height: 1.7rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 5px 12px;
+  cursor: pointer;
+}
+.profileIcon:hover{
+  background: rgba(255,255,255,0.4);
+  transition: background 0.2s;
+};

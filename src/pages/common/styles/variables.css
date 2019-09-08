@@ -1,0 +1,10 @@
+ :root {
+  --lzcBg:#040e26;
+  --lzcBg-gradient__toRight: linear-gradient(to right, #040e26, #040e2600);
+  --lzcBg-gradient__toLeft: linear-gradient(to left, #040e26, #040e2600);
+  --lzcBg-info-box: #040e268f;
+  --lzcBg-bg-general:#040e26;
+
+  --text-white: #ffffff;
+  --text-gray: #adadad;
+ }

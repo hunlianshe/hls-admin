@@ -1,0 +1,44 @@
+.Map{
+  background: #06031b;
+  height: 100%;
+
+  .searchBox {
+    position: absolute;
+    top: 20px;
+    max-width: 285px;
+    height: 18px;
+    box-sizing: border-box;
+    border-radius: 5rem;
+    background: #ffffff;
+    right: 200px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    input {
+      border: none;
+      background: #ffffff;
+      flex: 1;
+      border-radius: 5rem;
+      padding-left: 0.5rem;
+    }
+
+    .search-text {
+      width: 35px;
+      box-sizing: border-box;
+      font-size: 9px;
+      text-align: center;
+      line-height: 13px;
+      border-left: 1px solid #a3a3a9;
+      color: #000000;
+    }
+  }
+
+  .big-text {
+    font-size: 60px;
+    color: #ffffff;
+    font-weight: 700;
+    padding: 5rem;
+    padding-top: 20rem;
+  }
+}

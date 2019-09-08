@@ -1,0 +1,71 @@
+
+.App {
+    text-align: center;
+     overflow: auto; 
+  }
+  /* .ant-menu{
+    background:#F2F2F2;
+  } */
+  
+  .ant-menu-submenu > .ant-menu {
+    background:#F2F2F2;
+  }
+  .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+    background-color: #006EFC;
+  }
+  .ant-menu-item{
+    color: #41413F;
+    font-weight: bold;
+  }
+  .ant-menu-submenu-title{
+    
+  }
+  
+  .ant-menu-submenu-vertical > .ant-menu-submenu-title .ant-menu-submenu-arrow, .ant-menu-submenu-vertical-left > .ant-menu-submenu-title .ant-menu-submenu-arrow, .ant-menu-submenu-vertical-right > .ant-menu-submenu-title .ant-menu-submenu-arrow, .ant-menu-submenu-inline > .ant-menu-submenu-title .ant-menu-submenu-arrow {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    right: 112px;
+  }
+  
+  .ant-menu-item-selected {
+    color: #FFF;
+  }
+  
+  #components-layout-demo-top-side .logo {
+    width: 120px;
+    height: 31px;
+    margin: 16px 28px 16px 0;
+    float: left;
+  }
+  
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .App-link {
+    color: #61dafb;
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  

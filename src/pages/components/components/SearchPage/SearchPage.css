@@ -1,0 +1,141 @@
+
+@import url('../../../common/styles/variables.css');
+
+.SearchPage {
+/*  position: absolute;
+  top: 80px;
+  left: 320px;
+  right: 320px;
+  bottom: 100px;*/
+  background: var(--lzcBg);
+  color: #ffffff;
+  padding: 40px;
+  /*min-height: 300px;*/
+  position: relative;
+  height: 100%;
+  width: 100%;
+  z-index: 9999;
+
+  .searchBox {
+    position: absolute;
+    top: 40px;
+    width: 285px;
+    height: 36px;
+    box-sizing: border-box;
+    border-radius: 18px;
+    background: #ffffff;
+    right: 310px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    z-index: 999;
+    color: black;
+
+    input {
+      border: none;
+      background-color: #ffffff;
+      flex: 1;
+      border-radius: 5rem;
+      padding-left: 1rem;
+    }
+
+    .search-text {
+      width: 60px;
+      box-sizing: border-box;
+      font-size: 12px;
+      text-align: center;
+      line-height: 18px;
+      border-left: 1px solid #a3a3a9;
+    }
+  }
+
+  .search-flex {
+    display: flex;
+    align-items: center;
+
+  }
+  .search-filter-box{
+    margin: 20px 0;
+    position: absolute;
+    top: 80px;
+    right: 310px;
+
+    svg{
+      fill:#1890ff;
+    }
+
+    a{
+      border-radius: 5px;
+      border: 1px solid #1890ff;
+      padding: 5px 10px;
+      margin-left: 12px;
+    }
+    a:hover{
+      background-color: #1890ff36;
+      transition:background-color 0.1s;
+    }
+    .active{
+      background-color: #1890ff36;
+    }
+  }
+
+  .search-result-box{
+    margin-top: 80px;
+    height: calc(100% - 130px);
+
+    .ant-table{
+      max-height: calc(100% - 70px);
+      overflow-y: scroll;
+      line-height: 3;
+    }
+
+    .ant-table-thead span{
+      color: white;
+    }
+    .ant-table-tbody > tr > td{
+      border-bottom: 1px solid #e8e8e85e;
+    }
+    .ant-table-tbody td{
+      color: white;
+    }
+    .ant-table-thead > tr.ant-table-row-hover:not(.ant-table-expanded-row) > td,
+    .ant-table-tbody > tr.ant-table-row-hover:not(.ant-table-expanded-row) > td,
+    .ant-table-thead > tr:hover:not(.ant-table-expanded-row) > td,
+    .ant-table-tbody > tr:hover:not(.ant-table-expanded-row) > td {
+      background: #132244;
+    }
+    .ant-table-thead tr th{
+      background-color: #1f2e53;
+      border-bottom: 1px solid #e8e8e85e;
+    }
+
+    .ant-table-thead > tr > th.ant-table-column-has-actions.ant-table-column-has-sorters:hover{
+      background-color: #293a62;
+    }
+    .ant-table-thead > tr > th.ant-table-column-has-actions.ant-table-column-has-sorters:hover .anticon-filter, .ant-table-thead > tr > th.ant-table-column-has-actions.ant-table-column-has-sorters:hover .ant-table-filter-icon{
+      background-color: #777f92;
+    }
+
+  }
+
+  .go-back {
+    cursor: pointer;
+    opacity: 0.5;
+    text-align: right;
+
+    img {
+      width: 18px;
+    }
+  }
+  .go-back:hover{
+    opacity: 1;
+    transition:opacity 0.5s;
+  }
+  
+  .big-text {
+    font-size: 20px;
+    color: #ffffff;
+    flex: 1;
+    font-weight: 800;
+  }
+}

@@ -1,0 +1,61 @@
+.longgu {
+  position: absolute;
+    width: -webkit-calc(100% - 700px);
+    width: calc(100% - 700px);
+    height: 0px;
+    top: 100px;
+    left: 350px;
+    border-top: 4px solid;
+    -webkit-border-image: -webkit-gradient(linear, left top, right top, from(rgba(24, 144, 255, 0)),color-stop(#1890ff), to(rgba(24, 144, 255, 0))) 1;
+    -webkit-border-image: -webkit-linear-gradient(left, rgba(24, 144, 255, 0),#1890ff, rgba(24, 144, 255, 0)) 1;
+    -o-border-image: -o-linear-gradient(left, rgba(24, 144, 255, 0),#1890ff, rgba(24, 144, 255, 0)) 1;
+    border-image: -webkit-gradient(linear, left top, right top, from(rgba(24, 144, 255, 0)),color-stop(#1890ff), to(rgba(24, 144, 255, 0))) 1;
+    border-image: linear-gradient(90deg, rgba(24, 144, 255, 0),#1890ff, rgba(24, 144, 255, 0)) 1;;
+
+
+}
+.longguName{
+  width: 100%;
+  height: 30px;
+  color: white;
+  position: absolute;
+  top: 0;
+  text-align: center;
+  line-height: 2.2em;
+background: -moz-linear-gradient(left, #040e2600, #040e26, #040e2600);
+background: -webkit-linear-gradient(left, #040e2600, #040e26, #040e2600);
+background: -o-linear-gradient(left, #040e2600, #040e26, #040e2600);
+}
+.longguClose{
+    width: 50px;
+    height: 26px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    line-height: 2.2em;
+    color: white;
+    cursor: pointer;
+    background: var(--lzcBg);
+    border-radius: 15px;
+    border: 0;
+    cursor: pointer;
+    font-size: 12px;
+    text-align: center;
+    margin: 2px;
+}
+.longguBottom{
+    position: absolute;
+    width: 100%;
+    height: 15px;
+    top: -webkit-calc(100vh - 100px);
+    top: calc(100vh - 223px);
+    border-bottom: 4px solid;
+    -webkit-border-image: -webkit-gradient(linear, left top, right top, from(rgba(24, 144, 255, 0)),color-stop(#1890ff), to(rgba(24, 144, 255, 0))) 1;
+    -webkit-border-image: -webkit-linear-gradient(left, rgba(24, 144, 255, 0),#1890ff, rgba(24, 144, 255, 0)) 1;
+    -o-border-image: -o-linear-gradient(left, rgba(24, 144, 255, 0),#1890ff, rgba(24, 144, 255, 0)) 1;
+    border-image: -webkit-gradient(linear, left top, right top, from(rgba(24, 144, 255, 0)),color-stop(#1890ff), to(rgba(24, 144, 255, 0))) 1;
+    border-image: linear-gradient(90deg, rgba(24, 144, 255, 0),#1890ff, rgba(24, 144, 255, 0)) 1;;
+    background: -moz-linear-gradient(left, #040e2600, #040e26, #040e2600);
+background: -webkit-linear-gradient(left, #040e2600, #040e26, #040e2600);
+background: -o-linear-gradient(left, #040e2600, #040e26, #040e2600);
+}

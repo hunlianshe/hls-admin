@@ -1,0 +1,182 @@
+
+
+@import url('../../../common/styles/variables.css');
+
+.SyfwChartBox {
+  position: absolute;
+  top: 80px;
+  left: 320px;
+  right: 320px;
+  bottom: 100px;
+  background: var(--lzcBg-info-box);
+  color: #ffffff;
+  padding: 15px 20px;
+  min-height: 300px;
+  border:1px solid #86b1d94d;
+
+  .title {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid;
+    border-image: linear-gradient(90deg, #1890ff00,#1890ff, #1890ff00) 1;
+  }
+
+  .close {
+    flex: 1;
+    text-align: right;
+
+    img {
+      width: 18px;
+      opacity: 0.7;
+      cursor: pointer;
+    }
+    img:hover{
+      opacity: 1;
+      transition:opacity 0.2s;
+    }
+  }
+
+  .charts-title {
+    padding: 10px 0;
+    color: #969292;
+    display: flex;
+    line-height: 16px;
+    cursor: pointer;
+
+    .active {
+      color: #ffffff;
+    }
+
+    li + li {
+      border-left: 2px solid #ffffff;
+    }
+
+    li {
+      padding-right: 15px;
+    }
+
+    .paddingLeft_15 {
+      padding-left: 15px;
+    }
+  }
+
+  .charts-data {
+    background: var(--lzcBg-bg-general);
+    width: 100%;
+    height: calc(100% - 95px);
+    margin: 0;
+  }
+
+  .syfwChartOneDiv, .syfwChartThreeDiv{
+    margin-left: 6px;
+    margin-top: 6px;
+    width: calc(50% - 9px);
+    height: calc(100% - 12px);
+  }
+  .syfwChartTwoDiv, .syfwChartFourDiv{
+    margin-left: 6px;
+    margin-top: 6px;
+    width: calc(50% - 9px);
+    height: calc(50% - 9px);
+  }
+
+  
+
+  /* table css */
+  .tablePage {
+    /*  position: absolute;
+      top: 80px;
+      left: 320px;
+      right: 320px;
+      bottom: 100px;*/
+      background: var(--lzcBg-bg-general);
+      color: #ffffff;
+      /* padding: 40px; */
+      /*min-height: 300px;*/
+      position: relative;
+      height: 100%;
+      width: 100%;
+  
+      .table-result-box{
+        .ant-table-thead span{
+          color: white;
+        }
+        .ant-table-tbody > tr > td{
+          border-bottom: 1px solid #e8e8e85e;
+        }
+        .ant-table-tbody td{
+          color: white;
+        }
+        .ant-table-thead > tr.ant-table-row-hover:not(.ant-table-expanded-row) > td,
+        .ant-table-tbody > tr.ant-table-row-hover:not(.ant-table-expanded-row) > td,
+        .ant-table-thead > tr:hover:not(.ant-table-expanded-row) > td,
+        .ant-table-tbody > tr:hover:not(.ant-table-expanded-row) > td {
+          background: #132244;
+        }
+        .ant-table-thead tr th{
+          background-color: #1f2e53;
+          border-bottom: 1px solid #e8e8e85e;
+        }
+  
+        .ant-table-thead > tr > th.ant-table-column-has-actions.ant-table-column-has-sorters:hover{
+          background-color: #293a62;
+        }
+        .ant-table-thead > tr > th.ant-table-column-has-actions.ant-table-column-has-sorters:hover .anticon-filter, .ant-table-thead > tr > th.ant-table-column-has-actions.ant-table-column-has-sorters:hover .ant-table-filter-icon{
+          background-color: #777f92;
+        }
+        .ant-pagination-prev .ant-pagination-item-link, .ant-pagination-next .ant-pagination-item-link{
+          background-color: #040e26;
+          border: 1px solid rgba(255,255,255,0.5);
+        }
+        .ant-pagination-item-link i svg{
+          fill:rgba(255,255,255,0.5);
+        }
+        .ant-pagination-item-active{
+          font-weight: 500;
+          background: #1890ff;
+          border-color: #1890ff;
+        }
+        .ant-pagination-item {
+          background-color: transparent;
+  
+        }
+        .ant-pagination-item-active a{
+          background-color: transparent;
+        }
+        .ant-pagination-item a{
+          color: #1890ff;
+        }
+  
+      }
+  
+      .go-back {
+        cursor: pointer;
+        opacity: 0.5;
+        text-align: right;
+  
+        img {
+          width: 18px;
+        }
+      }
+      .go-back:hover{
+        opacity: 1;
+        transition:opacity 0.5s;
+      }
+      
+      .big-text {
+        font-size: 20px;
+        color: #ffffff;
+        flex: 1;
+        font-weight: 800;
+      }
+
+
+    }
+  
+
+
+
+
+}

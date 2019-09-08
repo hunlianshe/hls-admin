@@ -1,0 +1,26 @@
+
+
+ul {
+  list-style:none;
+  margin: 0px;
+} 
+
+input:focus {
+  outline-offset: 0px;
+  outline: none
+}
+
+/* 小于浏览器最小字体 */
+.font-8px {
+  font-size: 16px;
+  transform: scale(0.7); /* fix 浏览器最小字体限制 */ 
+}
+
+.IndexPage{
+	height: 100vh;
+}
+@font-face {
+	font-family: 'timeFont';
+ 	src: url('font/Oxanium-Medium.ttf'); /* IE9 Compat Modes */
+
+}
