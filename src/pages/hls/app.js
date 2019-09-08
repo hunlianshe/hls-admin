@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter, Route, Switch, Redirect } from 'react-router-dom';
 
-import './common/styles/common.css';
-import Routers from '../router/router.js';
+import '../common/styles/common.css';
+import Routers from './router/router.js';
 
 const start = () => {
 	let token = sessionStorage.getItem('token');
@@ -22,7 +22,7 @@ const start = () => {
 					})
 				}
 			</Switch>
-		</HashRouter>
+    </HashRouter>
 	), document.getElementById('app'));
 };
 

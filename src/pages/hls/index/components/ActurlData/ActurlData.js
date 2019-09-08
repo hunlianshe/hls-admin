@@ -2,13 +2,13 @@
 
 import React, {
   Component,
-} from './node_modules/react';
+} from 'react';
 
 import {
   Input,
   Select,
   Table
-} from './node_modules/antd';
+} from 'antd';
 const { Search } = Input;
 const { Option } = Select;
 

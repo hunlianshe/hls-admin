@@ -1,14 +1,14 @@
 
 import React, {
   Component,
-} from './node_modules/react';
+} from 'react';
 
 import './UploadFile.css';
-import '../../hls/node_modules/antd/dist/antd.css';
+import 'antd/dist/antd.css';
 
 import Config from '../../../../config/config';
 
-import { Upload, Icon, message, Modal } from '../../hls/node_modules/antd';
+import { Upload, Icon, message, Modal } from 'antd';
 const Dragger = Upload.Dragger;
 
 class Excel extends Component {

@@ -4,7 +4,7 @@ import React, {
 } from 'react';
 
 import 'antd/dist/antd.css';
-import './admin.css';
+import './index.css';
 
 import Model  from '../../components/model/model';
 import Excel  from '../../components/uploadFile/uploadFile';

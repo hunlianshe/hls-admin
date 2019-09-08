@@ -1,10 +1,10 @@
 
 import React, {
   Component,
-} from './node_modules/react';
+} from 'react';
 
 import './Login.css';
-import './node_modules/antd/dist/antd.css';
+import 'antd/dist/antd.css';
 
 import {
   Icon,
@@ -12,7 +12,7 @@ import {
   Input,
   Button,
   message,
-} from './node_modules/antd';
+} from 'antd';
 
 import Service from '../../../Http/service';
 import headImg from '../../public/icons/hpga@2x.png';

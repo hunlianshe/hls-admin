@@ -2,11 +2,11 @@
 
 import React, {
   Component,
-} from './node_modules/react';
+} from 'react';
 
 import {
   Steps,
-} from './node_modules/antd';
+} from 'antd';
 const Step = Steps.Step;
 
 import './pipeline.css';

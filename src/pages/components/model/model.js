@@ -4,11 +4,11 @@ import React, {
 } from 'react';
 
 import './model.css';
-import '../../hls/node_modules/antd/dist/antd.css';
+import 'antd/dist/antd.css';
 
 import Config from '../../../../config/config';
 
-import { Upload, Icon, message, Modal } from '../../hls/node_modules/antd';
+import { Upload, Icon, message, Modal } from 'antd';
 const Dragger = Upload.Dragger;
 
 class Model extends Component {

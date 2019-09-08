@@ -1,10 +1,10 @@
 var path = require('path');
 var glob = require('glob')
 var webpack = require('webpack');
-const Utils = require('./lib/utils');
+// const Utils = require('./lib/utils');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+// const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 

@@ -2,14 +2,14 @@
 
 import React, {
   Component,
-} from './node_modules/react';
+} from 'react';
 
 import './UploadActData.css';
-import './node_modules/antd/dist/antd.css';
+import 'antd/dist/antd.css';
 
 import Config from '../../../../../../config/config';
 
-import { Upload, Icon, message, Modal } from './node_modules/antd';
+import { Upload, Icon, message, Modal } from 'antd';
 const Dragger = Upload.Dragger;
 
 class UploadActData extends Component {
