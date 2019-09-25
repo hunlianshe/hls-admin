@@ -1,0 +1,28 @@
+.userDetail {
+  padding: 2rem;
+}
+
+.userDetail .sub-title {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.userDetail .info-cell {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.userDetail .info-title {
+  font-weight: 600;
+  border-left: 0.2rem solid #efefef;
+  padding-left: 0.5rem;
+  margin-top: 2rem;
+  line-height: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.userDetail .info-cell div:first-child {
+  flex: 0.5;
+}

@@ -2,6 +2,10 @@
 import axios from 'axios';
 import CONFIG from '../../config/config';
 
+
+axios.defaults.withCredentials = true;
+axios.defaults.crossDomain = true
+
 export default {
   getModel: (filename) => {
     return axios.get(`${CONFIG.HOST}/assert/getModel?filename=` + filename)

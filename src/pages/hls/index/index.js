@@ -8,6 +8,7 @@ import './index.css';
 
 import Model  from '../../components/model/model';
 import UserList from './components/userList/userList';
+import UserDetail from './components/userDetail/userDetail';
 import UploadActData from './components/uploadActData/uploadActData';
 //import Pipeline from './components/pipeline/pipeLine';
 
@@ -66,7 +67,8 @@ class Admin extends Component {
             style={{ height: '100%', borderRight: 0,background: '#F2F2F2', color: "#41413F"}}
             onClick={this.handleMenuClick}
           >
-            <Menu.Item key="1">用户管理</Menu.Item>
+              <Menu.Item key="1">用户管理</Menu.Item>
+              <Menu.Item key="2">用户详情</Menu.Item>
           </Menu>
         </Sider>
         <Layout >
@@ -78,7 +80,8 @@ class Admin extends Component {
               margin: 0,
               minHeight: 280,
             }}>
-              {menuKey === '1' ? <UserList /> : null }
+              {menuKey === '1' ? <UserList /> : null}
+              {menuKey === '2' ? <UserDetail /> : null}
           </Content>
         </Layout>
       </Layout>
