@@ -285,6 +285,19 @@ export default {
         console.log(res.msg);
       }
     });
-  }
+  },
+
+  /** userList */
+  getUserList: (id) => {
+    return axios.post(`${CONFIG.HOST}/users/listUsers`, id)
+      .then((res) => {
+        console.log('getUserList', res);
+        if (res.code === 200) {
+          return res.data.data;
+        } else {
+          console.log(res.msg);
+        }
+      });
+  },
 }
 
