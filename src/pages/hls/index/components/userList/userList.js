@@ -3,6 +3,7 @@
 import React, {
   Component,
 } from 'react';
+import { withRouter } from "react-router-dom";
 
 import { 
   Input,
@@ -17,7 +18,7 @@ import Service from '../../../../../Http/service';
 
 
 
-class List extends Component {
+class UserList extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -227,7 +228,7 @@ class List extends Component {
   }
 }
 
-export default List;
+export default withRouter(UserList);
 
 
 
