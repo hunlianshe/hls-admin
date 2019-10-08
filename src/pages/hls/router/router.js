@@ -4,6 +4,7 @@ import UploadFile from '../../components/uploadFile/uploadFile';
 import Index from '../index/index';
 import Login from '../../components/login/login';
 // import Register from '../../components/register/register';
+import UserList from '../../hls/index/components/userList/userList';
 import UserDetail from '../../hls/index/components/userDetail/userDetail';
 
 export default [
@@ -13,4 +14,5 @@ export default [
   { path: "/login", name: "Login", component: Login },
   // { path: "/register", name: "Register", component: Register },
   { path: "/userDetail", name: "UserDetail", component: UserDetail },
+  { path: "/userList", name: "UserList", component: UserList },
 ]
