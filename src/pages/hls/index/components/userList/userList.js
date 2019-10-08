@@ -154,7 +154,7 @@ class List extends Component {
           <span>
             {/* <Divider type="vertical" /> */}
             <a onClick={() => {
-              this.goDetail(record._id);
+              this.goDetail(record.openid);
             }}>详情</a>
           </span>
         ),

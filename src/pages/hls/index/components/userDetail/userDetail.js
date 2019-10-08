@@ -28,11 +28,13 @@ class UserDetail extends Component {
   }
 
   componentWillMount() {
-    this.getUserDetail();
+    console.log('this.$route.query:', this.$route.query);
+    const { openid } = this.$route.query
+    // this.getUserDetail();
   }
 
-  getUserDetail(body = {}) {
-    Service.getUserList(body).then((result) => {
+  getUserDetail(openid) {
+    Service.getUserInfo(openid).then((result) => {
       console.log('result', result);
       let data = result.data;
       data.gender = data.gender === 1 ? '男' : '女';
@@ -87,7 +89,6 @@ class UserDetail extends Component {
           </div>
         </div>
       </div>
-      
     </div>
   }
 }
