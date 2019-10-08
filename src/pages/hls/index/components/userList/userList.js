@@ -154,8 +154,9 @@ class List extends Component {
           <span>
             {/* <Divider type="vertical" /> */}
             <a onClick={() => {
+              this.goDetail(record._id);
               console.log('hhhhhhhh');
-              this.props.history.push(`/userDetail?id=${record._id}`);
+              // this.props.history.push(`/userDetail?id=${record._id}`);
             }}>详情</a>
           </span>
         ),
