@@ -61,7 +61,6 @@ class Login extends Component {
     this.props.history.push('/register');
   }
 
-
   render() {
     const { getFieldDecorator } = this.props.form;
     return (

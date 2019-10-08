@@ -137,7 +137,7 @@ const columns = [
       <span>
         {/* <Divider type="vertical" /> */}
         <a onClick={() => {
-          // this.goDetail(record._id)
+          this.goDetail(record._id)
         }}>详情</a>
       </span>
     ),
@@ -160,6 +160,10 @@ class List extends Component {
     this.getUserList();
   }
 
+  goDetail(id) {
+    this.props.history.push(`/userDetail?id=${id}`);
+  }
+
   getUserList(body = {}) {
     console.log("body", body)
     Service.getUserList(body).then((result) => {
@@ -169,9 +173,8 @@ class List extends Component {
         return e.gender = e.gender === 1 ? '男' : '女';
       });
       this.setState({ data })
-    }) 
+    })
   }
-
 
   /** items per page */
   handlePageSizeChange = (value) => {
