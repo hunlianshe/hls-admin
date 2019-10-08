@@ -13,6 +13,6 @@ export default [
   { path: "/uploadFile", name: "UploadFile", component: UploadFile },
   { path: "/login", name: "Login", component: Login },
   // { path: "/register", name: "Register", component: Register },
-  { path: "/userDetail", name: "UserDetail", component: UserDetail },
+  { path: "/userDetail/:id", name: "UserDetail", component: UserDetail },
   { path: "/userList", name: "UserList", component: UserList },
 ]

@@ -164,7 +164,7 @@ class List extends Component {
   }
 
   goDetail(id) {
-    this.props.history.push(`/userDetail?id=${id}`);
+    this.props.history.push(`/userDetail/${id}`);
   }
 
   getUserList(body = {}) {

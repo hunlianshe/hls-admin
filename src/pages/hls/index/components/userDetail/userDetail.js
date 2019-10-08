@@ -20,7 +20,7 @@ class UserDetail extends Component {
     super(props)
     this.state = {
       url: '',
-      data: {},
+      userInfo: {},
       paginationProps: { pageSize: 10 },
       currentPage: 1,
       pageSize: 10000,
@@ -28,65 +28,73 @@ class UserDetail extends Component {
   }
 
   componentWillMount() {
-    console.log('this.$route.query:', this.$route.query);
-    const { openid } = this.$route.query
-    // this.getUserDetail();
+    console.log('this.$route.query:', this.props.match.params.id);
+    const openid  = this.props.match.params.id
+    this.getUserDetail(openid);
   }
 
   getUserDetail(openid) {
     Service.getUserInfo(openid).then((result) => {
       console.log('result', result);
-      let data = result.data;
-      data.gender = data.gender === 1 ? '男' : '女';
-      this.setState({ data });
+      let userInfo = result.data;
+      userInfo.gender = userInfo.gender && userInfo.gender === 1 ? '男' : '女';
+      this.setState({ userInfo });
     });
   }
 
   render() {
+    const userInfo = this.state.userInfo;
     return <div className="userDetail">
       <div className="sub-title">用户详情</div>
       <div>
         <div className="info-title">基本信息</div>
         <div className="info-cell">
-          <div>昵称：hahhh</div>
-          <div>手机：18887786789</div>
+          <div>昵称：{userInfo.nickName}</div>
+          <div>手机：{userInfo.phone}</div>
         </div>
         <div className="info-cell">
-          <div>性别：hahhh</div>
-          <div>生日：18887786789</div>
+          <div>性别：{userInfo.gender}</div>
+          <div>生日：{userInfo.birth}</div>
         </div>
         <div className="info-cell">
-          <div>身高：hahhh</div>
-          <div>收入：18887786789</div>
+          <div>身高：{userInfo.height}</div>
+          <div>收入：{userInfo.salary}</div>
         </div>
         <div className="info-cell">
-          <div>身高：hahhh</div>
-          <div>收入：18887786789</div>
+          <div>工作地区：{userInfo.workProvince} {userInfo.workCity} {userInfo.workRegion}</div>
+          <div>学历：{userInfo.education}</div>
         </div>
         <div className="info-cell">
-          <div>工作地区：hahhh</div>
-          <div>学历：18887786789</div>
+          <div>是否想要孩子：{userInfo.wantChild}</div>
+          <div>是否有孩子：{userInfo.hasChild}</div>
         </div>
         <div className="info-cell">
-          <div>是否想要孩子：hahhh</div>
-          <div>是否有孩子：18887786789</div>
+          <div>婚姻状况：{userInfo.isMarriage}</div>
+          <div>职业：{userInfo.jobGeneral} {userInfo.jobDetail}</div>
         </div>
         <div className="info-cell">
-          <div>婚姻状况：hahhh</div>
-          <div>职业：18887786789</div>
-        </div>
-        <div className="info-cell">
-          <div>是否买房：hahhh</div>
+          <div>是否买房：{userInfo.haveHouse}</div>
         </div>
         <div>
           <div className="info-title">择偶标准</div>
           <div className="info-cell">
-            <div>年龄：hahhh</div>
-            <div>收入：18887786789</div>
+            <div>年龄：{userInfo.objectInfo && userInfo.objectInfo.age ? userInfo.objectInfo.age : '--'}</div>
+            <div>收入：{userInfo.objectInfo && userInfo.objectInfo.salary ? userInfo.objectInfo.salary : '--'}</div>
           </div>
           <div className="info-cell">
-            <div>身高：hahhh</div>
+            <div>身高：{userInfo.objectInfo && userInfo.objectInfo.height ? userInfo.objectInfo.height : '--'}</div>
           </div>
+        </div>
+        <div>
+          <div className="info-title">图片</div>
+          {
+            userInfo.photos && userInfo.photos.map((url) => {
+              return <div className="user-img">
+                <img src={url} />
+              </div>
+            })
+          }
+          
         </div>
       </div>
     </div>

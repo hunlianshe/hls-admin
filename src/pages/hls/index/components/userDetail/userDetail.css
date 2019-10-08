@@ -23,6 +23,14 @@
   margin-bottom: 1rem;
 }
 
-.userDetail .info-cell div:first-child {
+.userDetail .info-cell div{
   flex: 0.5;
+}
+
+.user-img {
+  padding-bottom: 1rem;
+}
+
+.user-img img {
+  height: 10rem;
 }

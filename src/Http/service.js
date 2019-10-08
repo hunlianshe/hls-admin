@@ -2,9 +2,8 @@
 import axios from 'axios';
 import CONFIG from '../../config/config';
 
-
 axios.defaults.withCredentials = true;
-axios.defaults.crossDomain = true
+axios.defaults.crossDomain = true;
 
 export default {
   getModel: (filename) => {
@@ -193,8 +192,24 @@ export default {
 
   /** getUserInfo */
   getUserInfo: (openid) => {
+    const token = sessionStorage.getItem('token');
+    axios.defaults.headers.common['Authorization'] = 'Bearer ' + token;
+    
     console.log('openid--->', openid)
-    return axios.get(`${CONFIG.HOST}/users/getUserInfo?openid=${openid}`)
+    return axios.get(`${CONFIG.HOST}/users/getUserInfo/${openid}`)
+      .then((res) => {
+        if (res.data.code === 200) {
+          return res.data;
+        } else {
+          console.log(res.msg);
+        }
+      });
+  },
+
+  /** adminlogin */
+  adminlogin: (body = {}) => {
+    console.log('body--->', body);
+    return axios.post(`${CONFIG.HOST}/users/adminlogin`, body)
       .then((res) => {
         if (res.data.code === 200) {
           return res.data;

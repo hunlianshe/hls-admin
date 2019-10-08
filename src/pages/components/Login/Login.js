@@ -47,10 +47,10 @@ class Login extends Component {
     if (JSON.stringify(params) === '{}') {
       return false;
     }
-    Service.login(params).then((result) => {
+    Service.adminlogin(params).then((result) => {
       if (result.code === 200) {
-        sessionStorage.setItem('token', `${result.data.username}${result.data.jnumber}`);
-        this.props.history.push('/');
+        sessionStorage.setItem('token', `${result.data.token}`);
+        this.props.history.push('/userList');
       } else {
         message.error(result.msg);
       }
@@ -72,7 +72,7 @@ class Login extends Component {
         <div className="login-box">
           <Form onSubmit={this.handleSubmit} className="login-form">
             <Form.Item>
-              {getFieldDecorator('jnumber', {
+              {getFieldDecorator('username', {
                 rules: [{ required: true, message: '请输入手机号' }],
               })(
                 <Input
