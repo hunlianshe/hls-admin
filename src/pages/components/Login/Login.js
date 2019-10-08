@@ -96,10 +96,10 @@ class Login extends Component {
               <Button type="primary" htmlType="submit" className="login-form-button">
                 登录
               </Button>
-              <div className="flex-hrz">
+              {/* <div className="flex-hrz">
                 <div className="register" onClick={() => {this.goRegister()}}>注册</div>
                 <div>忘记密码？</div>
-              </div>
+              </div> */}
             </Form.Item>
           </Form>
         </div>
