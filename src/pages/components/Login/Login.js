@@ -69,16 +69,16 @@ class Login extends Component {
         <div className="head-img">
           <img src={headImg}/>
         </div>
-        <div className="title">黄浦地理信息平台</div>
+        <div className="title">婚恋社后台管理系统</div>
         <div className="login-box">
           <Form onSubmit={this.handleSubmit} className="login-form">
             <Form.Item>
               {getFieldDecorator('jnumber', {
-                rules: [{ required: true, message: '请输入警号' }],
+                rules: [{ required: true, message: '请输入手机号' }],
               })(
                 <Input
                   prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
-                  placeholder="警号"
+                  placeholder="手机号"
                 />,
               )}
             </Form.Item>
