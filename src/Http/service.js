@@ -292,8 +292,9 @@ export default {
   },
 
   /** userList */
-  getUserList: () => {
-    return axios.post(`${CONFIG.HOST}/users/adminuserlist`)
+  getUserList: (body) => {
+    console.log('body--->', body)
+    return axios.post(`${CONFIG.HOST}/users/adminuserlist`, body)
       .then((res) => {
         console.log('users/adminuserlist', res);
         if (res.data.code === 200) {

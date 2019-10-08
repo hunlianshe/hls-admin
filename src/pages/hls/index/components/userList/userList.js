@@ -50,9 +50,11 @@ const columns = [
     textWrap: 'word-break',
     dataIndex: 'height',
     key: 'height',
+    defaultSortOrder: 'descend',
+    sorter: (a, b) => a.height - b.height,
   },
   {
-    title: '收入',
+    title: '收入（万）',
     width: 100,
     textWrap: 'word-break',
     dataIndex: 'salary',
@@ -128,6 +130,18 @@ const columns = [
     dataIndex: 'haveHouse',
     key: 'haveHouse',
   },
+  {
+    title: 'Action',
+    key: 'action',
+    render: (text, record) => (
+      <span>
+        {/* <Divider type="vertical" /> */}
+        <a onClick={() => {
+          // this.goDetail(record._id)
+        }}>详情</a>
+      </span>
+    ),
+  }
 ];
 
 class List extends Component {
@@ -146,13 +160,18 @@ class List extends Component {
     this.getUserList();
   }
 
-  getUserList() {
-    Service.getUserList().then((result) => {
+  getUserList(body = {}) {
+    console.log("body", body)
+    Service.getUserList(body).then((result) => {
       console.log('result', result);
       let data = result.data;
+      data.forEach((e) => {
+        return e.gender = e.gender === 1 ? '男' : '女';
+      });
       this.setState({ data })
     }) 
   }
+
 
   /** items per page */
   handlePageSizeChange = (value) => {
@@ -160,7 +179,8 @@ class List extends Component {
   }
 
   onSearch = (value) => {
-    this.getModelMetadata(1, 10, value);
+    console.log('value',value)
+    this.getUserList({ nickName: value});
   } 
 
   render() {
