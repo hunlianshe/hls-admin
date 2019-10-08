@@ -50,7 +50,7 @@ class Login extends Component {
     Service.adminlogin(params).then((result) => {
       if (result.code === 200) {
         sessionStorage.setItem('token', `${result.data.token}`);
-        this.props.history.push('/userList');
+        this.props.history.push('/');
       } else {
         message.error(result.msg);
       }
