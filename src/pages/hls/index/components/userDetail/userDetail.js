@@ -20,7 +20,7 @@ class UserDetail extends Component {
     super(props)
     this.state = {
       url: '',
-      data: [],
+      data: {},
       paginationProps: { pageSize: 10 },
       currentPage: 1,
       pageSize: 10000,
@@ -28,18 +28,19 @@ class UserDetail extends Component {
   }
 
   componentWillMount() {
-    this.getModelMetadata();
+    this.getUserDetail();
   }
 
-  getModelMetadata(currentPage = 1, limit = 10, filename = '') {
-    Service.getModelMetadata({ currentPage, limit, filename }).then((data) => {
-      data = data.data
-      this.setState({ data })
-    })
+  getUserDetail(body = {}) {
+    Service.getUserList(body).then((result) => {
+      console.log('result', result);
+      let data = result.data;
+      data.gender = data.gender === 1 ? '男' : '女';
+      this.setState({ data });
+    });
   }
 
   render() {
-
     return <div className="userDetail">
       <div className="sub-title">用户详情</div>
       <div>
