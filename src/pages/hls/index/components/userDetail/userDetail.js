@@ -14,6 +14,7 @@ const { Option } = Select;
 
 import './userDetail.css';
 import Service from '../../../../../Http/service';
+import Utils from '../../../../utils/utils';
 
 class UserDetail extends Component {
   constructor(props) {
@@ -46,10 +47,11 @@ class UserDetail extends Component {
     const userInfo = this.state.userInfo;
     return <div className="userDetail">
       <div className="sub-title">用户详情</div>
+      
       <div>
         <div className="info-title">基本信息</div>
         <div className="info-cell">
-          <div>昵称：{userInfo.nickName}</div>
+          <div>昵称：{userInfo.name}</div>
           <div>手机：{userInfo.phone}</div>
         </div>
         <div className="info-cell">
@@ -86,6 +88,16 @@ class UserDetail extends Component {
           </div>
         </div>
         <div>
+          <div className="info-title">其他信息</div>
+          <div className="info-cell">
+            <div>注册日期：{Utils.formatDate(userInfo.createdAt)}</div>
+          </div>
+        </div>
+        <div>
+          <div className="info-title">头像</div>
+          <img style={{borderRadius: '70px', width: '70px', height: '70px'}} src={userInfo.avatarUrl} />
+        </div>
+        <div>
           <div className="info-title">图片</div>
           {
             userInfo.photos && userInfo.photos.map((url) => {
@@ -94,7 +106,6 @@ class UserDetail extends Component {
               </div>
             })
           }
-          
         </div>
       </div>
     </div>

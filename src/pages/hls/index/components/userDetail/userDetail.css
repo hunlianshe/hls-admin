@@ -5,6 +5,8 @@
 .userDetail .sub-title {
   text-align: center;
   padding: 1.5rem;
+  font-size: 2rem;
+  font-weight: 600;
 }
 
 .userDetail .info-cell {
@@ -29,6 +31,10 @@
 
 .user-img {
   padding-bottom: 1rem;
+  display: block;
+  width: 10rem;
+  float: left;
+  margin-right: 2rem;
 }
 
 .user-img img {
