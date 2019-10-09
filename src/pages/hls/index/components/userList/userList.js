@@ -149,7 +149,7 @@ class UserList extends Component {
         key: 'haveHouse',
       },
       {
-        title: 'Action',
+        title: '操作',
         key: 'action',
         render: (text, record) => (
           <span>
