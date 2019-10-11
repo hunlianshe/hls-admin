@@ -14,10 +14,9 @@ import LikeList from './components/likeList/likeList';
 import { 
   Layout,
   Menu,
-  Header,
 } from 'antd';
 import { element } from 'prop-types';
-const { Sider, Content } = Layout;
+const { Header, Sider, Content } = Layout;
 
 class Admin extends Component {
   constructor(props) {
@@ -37,19 +36,11 @@ class Admin extends Component {
   render() {
     const { menuKey } = this.state;
     return <div style={{"overflow":"scroll"}}>
-      <Layout>
-        {/* <Header className="header" style={{ background: '#FFF' }}>
-          <div className="logo" />
-            <div style={{display:"none",justifyContent:"space-between"}}>
-              <div>
-                <img src={iconMenu} width="20px" height="20px" style={{marginRight:"15px"}} />
-                <img src={iconLogo} width="110px" height="22px"  />
-              </div>
-              <div>
-                <img src={iconNotification}  width="23.33px" height="23.33px" style={{marginRight:"15px"}}/>
-                <img src={zukliu}  width="50px" height="50px" />
-              </div>
-            </div>
+      <Layout style={{ background: '#F2F2F2' }}>
+        <Header className="header">
+          <div style={{ color: '#ffffff' }}>
+            婚恋社后台管理系统
+          </div>
             <Menu
               theme="white"
               mode="horizontal"
@@ -57,7 +48,7 @@ class Admin extends Component {
               style={{ lineHeight: '64px' }}
             >
           </Menu>
-        </Header> */}
+        </Header>
         <Layout>
           <Sider width={200} style={{ background: '#F2F2F2' }}>
             <Menu 
