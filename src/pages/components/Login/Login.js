@@ -66,7 +66,7 @@ class Login extends Component {
     return (
       <div className="Login">
         <div className="head-img">
-          <img src={headImg}/>
+          {/* <img src={headImg}/> */}
         </div>
         <div className="title">婚恋社后台管理系统</div>
         <div className="login-box">

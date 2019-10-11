@@ -8,13 +8,15 @@ import './index.css';
 
 import UserList from './components/userList/userList';
 import XlcsList from './components/xlcsList/xlcsList';
-import UserDetail from './components/userDetail/userDetail';
+import LikeList from './components/likeList/likeList';
 //import Pipeline from './components/pipeline/pipeLine';
 
 import { 
   Layout,
   Menu,
+  Header,
 } from 'antd';
+import { element } from 'prop-types';
 const { Sider, Content } = Layout;
 
 class Admin extends Component {
@@ -38,22 +40,22 @@ class Admin extends Component {
       <Layout>
         {/* <Header className="header" style={{ background: '#FFF' }}>
           <div className="logo" />
-          <div style={{display:"none",justifyContent:"space-between"}}>
-            <div>
-              <img src={iconMenu} width="20px" height="20px" style={{marginRight:"15px"}} />
-              <img src={iconLogo} width="110px" height="22px"  />
+            <div style={{display:"none",justifyContent:"space-between"}}>
+              <div>
+                <img src={iconMenu} width="20px" height="20px" style={{marginRight:"15px"}} />
+                <img src={iconLogo} width="110px" height="22px"  />
+              </div>
+              <div>
+                <img src={iconNotification}  width="23.33px" height="23.33px" style={{marginRight:"15px"}}/>
+                <img src={zukliu}  width="50px" height="50px" />
+              </div>
             </div>
-          <div>
-          <img src={iconNotification}  width="23.33px" height="23.33px" style={{marginRight:"15px"}}/>
-          <img src={zukliu}  width="50px" height="50px" />
-          </div>
-          </div>
-          <Menu
-            theme="white"
-            mode="horizontal"
-            defaultSelectedKeys={['2']}
-            style={{ lineHeight: '64px' }}
-          >
+            <Menu
+              theme="white"
+              mode="horizontal"
+              defaultSelectedKeys={['2']}
+              style={{ lineHeight: '64px' }}
+            >
           </Menu>
         </Header> */}
         <Layout>
@@ -68,6 +70,7 @@ class Admin extends Component {
             >
               <Menu.Item key="1">用户管理</Menu.Item>
               <Menu.Item key="2">心理测试列表</Menu.Item>
+              <Menu.Item key="3">喜欢列表管理</Menu.Item>
             </Menu>
           </Sider>
           <Layout >
@@ -81,6 +84,8 @@ class Admin extends Component {
               }}>
               {menuKey === '1' ? <UserList /> : null}
               {menuKey === '2' ? <XlcsList /> : null}
+              {menuKey === '3' ? <LikeList /> : null}
+              
             </Content>
           </Layout>
         </Layout>

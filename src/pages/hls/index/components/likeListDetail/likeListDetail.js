@@ -5,20 +5,16 @@ import React, {
 } from 'react';
 import { withRouter } from "react-router-dom";
 
-import { 
-  Input,
-  Select,
+import {
   Table
 } from 'antd';
-const { Search } = Input;
-const { Option } = Select;
 
-import './userList.css';
+import './likeListDetail.css';
 import Service from '../../../../../Http/service';
 import Utils from '../../../../utils/utils';
 
 
-class UserList extends Component {
+class LikeListDetail extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -28,7 +24,7 @@ class UserList extends Component {
       currentPage: 1,
       pageSize: 10000,
     }
-    
+
     this.goDetail = this.goDetail.bind(this);
   }
 
@@ -160,26 +156,30 @@ class UserList extends Component {
         key: 'action',
         render: (text, record) => (
           <span>
-            {/* <Divider type="vertical" /> */}
-            <a target="_blank" href={`${window.location.origin}/#/userDetail/${record.openid}`} 
-            // onClick={() => {
-            //   this.goDetail(record.openid);
-            // }}
-            >详情</a>
+            <a onClick={() => {
+              this.goDetail(record.openid);
+            }}>详情</a>
           </span>
         ),
       }
     ];
-    this.getUserList();
+    const openid = this.props.match.params.id;
+    const type = this.props.match.params.type;
+    const params = {
+      openid,
+      type,
+    }
+    console.log('params', params);
+    this.getListLikes(params);
   }
 
   goDetail(id) {
     this.props.history.push(`/userDetail/${id}`);
   }
 
-  getUserList(body = {}) {
-    console.log("body", body)
-    Service.getUserList(body).then((result) => {
+  getListLikes(params) {
+    console.log("body", params);
+    Service.getListLikes(params).then((result) => {
       console.log('result', result);
       let data = result.data;
       data.forEach((e) => {
@@ -196,33 +196,20 @@ class UserList extends Component {
     this.setState({ paginationProps: { pageSize: value } })
   }
 
-  onSearch = (value) => {
-    console.log('value',value)
-    this.getUserList({ nickName: value});
-  }
-
   render() {
     return <div>
-      <div className="sub-title">用户列表</div>
-      <div className="list-search">
-        <Search
-          placeholder="昵称"
-          enterButton="搜索"
-          size="large"
-          onSearch={this.onSearch}
-        />
-      </div>
+      <div className="sub-title">用户喜欢列表</div>
       <div className="list-table">
         <Table pagination={this.state.paginationProps}
           columns={this.columns}
           rowKey={record => record._id}
-          dataSource={this.state.data}/>
+          dataSource={this.state.data} />
       </div>
     </div>
   }
 }
 
-export default withRouter(UserList);
+export default withRouter(LikeListDetail);
 
 
 

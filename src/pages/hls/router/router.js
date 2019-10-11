@@ -6,6 +6,7 @@ import Login from '../../components/login/login';
 // import Register from '../../components/register/register';
 import UserList from '../../hls/index/components/userList/userList';
 import UserDetail from '../../hls/index/components/userDetail/userDetail';
+import LikeListDetail from '../../hls/index/components/likeListDetail/likeListDetail';
 
 export default [
   { path: "/", name: "Index", component: Index, auth: false },
@@ -15,4 +16,5 @@ export default [
   // { path: "/register", name: "Register", component: Register },
   { path: "/userDetail/:id", name: "UserDetail", component: UserDetail },
   { path: "/userList", name: "UserList", component: UserList },
+  { path: "/likeListDetail/:id/:type", name: "likeListDetail", component: LikeListDetail },
 ]
