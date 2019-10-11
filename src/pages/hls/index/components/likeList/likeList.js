@@ -57,9 +57,7 @@ class LikeList extends Component {
         key: 'meLike',
         render: (text, record) => (
           <span>
-            <a onClick={() => {
-              this.goList(record.openid, 'meLike');
-            }}>我喜欢</a>
+            <a target="_blank" href={`${window.location.origin}/#/likeListDetail/${record.openid}/meLike`}>我喜欢</a>
           </span>
         ),
       },
@@ -68,9 +66,7 @@ class LikeList extends Component {
         key: 'likeMe',
         render: (text, record) => (
           <span>
-            <a onClick={() => {
-              this.goList(record.openid, 'likeMe');
-            }}>喜欢我</a>
+            <a target="_blank" href={`${window.location.origin}/#/likeListDetail/${record.openid}/likeMe`}>喜欢我</a>
           </span>
         ),
       },
@@ -79,9 +75,11 @@ class LikeList extends Component {
         key: 'likeEachOther',
         render: (text, record) => (
           <span>
-            <a onClick={() => {
-              this.goList(record.openid, 'likeEachOther');
-            }}>相互喜欢</a>
+            <a target="_blank" href={`${window.location.origin}/#/likeListDetail/${record.openid}/likeEachOther`}
+            // onClick={() => {
+            //   this.goList(record.openid, 'likeEachOther');
+            // }}
+            >相互喜欢</a>
           </span>
         ),
       }
@@ -90,7 +88,8 @@ class LikeList extends Component {
   }
 
   goList(id, type) {
-    this.props.history.push(`/likeListDetail/${id}/${type}`);
+    // this.props.history.push(`/likeListDetail/${id}/${type}`);
+    window.location.href = `${window.location.origin}/#/likeListDetail/${id}/${type}`;
   }
 
   getUserList(body = {}) {
