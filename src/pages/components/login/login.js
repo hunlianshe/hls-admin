@@ -3,7 +3,7 @@ import React, {
   Component,
 } from 'react';
 
-import './login1.css';
+import './login.css';
 import 'antd/dist/antd.css';
 
 import {
