@@ -12,7 +12,7 @@ import {
 import './likeListDetail.css';
 import Service from '../../../../../Http/service';
 import Utils from '../../../../utils/utils';
-
+import HlsHeader from '../components/hlsHeader/hlsHeader';
 
 class LikeListDetail extends Component {
   constructor(props) {
@@ -198,6 +198,7 @@ class LikeListDetail extends Component {
 
   render() {
     return <div>
+      <HlsHeader />
       <div className="sub-title">用户喜欢列表</div>
       <div className="list-table">
         <Table pagination={this.state.paginationProps}

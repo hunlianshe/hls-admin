@@ -9,7 +9,7 @@ import './index.css';
 import UserList from './components/userList/userList';
 import XlcsList from './components/xlcsList/xlcsList';
 import LikeList from './components/likeList/likeList';
-//import Pipeline from './components/pipeline/pipeLine';
+import HlsHeader from './components/components/hlsHeader/hlsHeader';
 
 import { 
   Layout,
@@ -35,20 +35,10 @@ class Admin extends Component {
 
   render() {
     const { menuKey } = this.state;
+    const token = sessionStorage.getItem('token');
     return <div style={{"overflow":"scroll"}}>
       <Layout style={{ background: '#F2F2F2' }}>
-        <Header className="header">
-          <div style={{ color: '#ffffff' }}>
-            婚恋社后台管理系统
-          </div>
-            <Menu
-              theme="white"
-              mode="horizontal"
-              defaultSelectedKeys={['2']}
-              style={{ lineHeight: '64px' }}
-            >
-          </Menu>
-        </Header>
+        <HlsHeader />
         <Layout>
           <Sider width={200} style={{ background: '#F2F2F2' }}>
             <Menu 
