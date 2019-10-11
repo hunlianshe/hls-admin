@@ -3,7 +3,7 @@ import React, {
   Component,
 } from 'react';
 
-import './UploadFile.css';
+import './uploadFile.css';
 import 'antd/dist/antd.css';
 
 import Config from '../../../../config/config';
