@@ -9,6 +9,8 @@ import {
 } from 'antd';
 const { Header} = Layout;
 
+import user from '../../../public/user.png';
+
 class HlsHeader extends Component {
   constructor(props) {
     super(props)
@@ -29,8 +31,9 @@ class HlsHeader extends Component {
          <div className="flex-1">婚恋社后台管理系统</div>
          <div>
            {token
-             ? <div>
-               已登陆
+             ? <div className="display-flex">
+               <img src={user} />
+                  已登陆
                 </div>
              : null}
          </div>

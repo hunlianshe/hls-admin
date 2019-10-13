@@ -7,3 +7,15 @@
   .header-content .flex-1 {
     flex: 1;
   }
+
+  .display-flex {
+    display: flex;
+    align-items: center;
+  }
+
+  .header-content  .display-flex img {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 2rem;
+    padding-right: 1rem;
+  }
