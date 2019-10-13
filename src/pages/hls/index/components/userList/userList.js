@@ -42,6 +42,13 @@ class UserList extends Component {
         key: 'nickName',
       },
       {
+        title: '微信号',
+        width: 100,
+        textWrap: 'word-break',
+        dataIndex: 'weChatId',
+        key: 'weChatId',
+      },
+      {
         title: '手机',
         textWrap: 'word-break',
         dataIndex: 'phone',

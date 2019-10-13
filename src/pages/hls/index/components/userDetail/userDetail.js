@@ -56,15 +56,19 @@ class UserDetail extends Component {
           <div className="info-title">基本信息</div>
           <div className="info-cell">
             <div>昵称：{userInfo.name}</div>
-            <div>手机：{userInfo.phone}</div>
+            <div>手机：{userInfo.phone ? userInfo.phone : '--'}</div>
           </div>
           <div className="info-cell">
             <div>性别：{userInfo.gender}</div>
-            <div>生日：{userInfo.birth}</div>
+            <div>微信号：{userInfo.weChatId ? userInfo.weChatId : '--'} </div>
           </div>
           <div className="info-cell">
             <div>身高：{userInfo.height}</div>
             <div>收入：{userInfo.salary}</div>
+          </div>
+          <div className="info-cell">
+            <div>生日：{userInfo.birth}</div>
+            <div>是否买房：{userInfo.haveHouse}</div>
           </div>
           <div className="info-cell">
             <div>工作地区：{userInfo.workProvince} {userInfo.workCity} {userInfo.workRegion}</div>
@@ -77,9 +81,6 @@ class UserDetail extends Component {
           <div className="info-cell">
             <div>婚姻状况：{userInfo.isMarriage}</div>
             <div>职业：{userInfo.jobGeneral} {userInfo.jobDetail}</div>
-          </div>
-          <div className="info-cell">
-            <div>是否买房：{userInfo.haveHouse}</div>
           </div>
           <div>
             <div className="info-title">择偶标准</div>
