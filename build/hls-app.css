@@ -25834,6 +25834,24 @@ svg {
         -ms-flex: 1;
             flex: 1;
   }
+
+  .display-flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .header-content  .display-flex img {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 2rem;
+    margin-right: 1rem;
+  }
 .Login {
   background: #080618;
   width: 100%;
