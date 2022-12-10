@@ -20,7 +20,7 @@
     "debug": "~2.6.9",
     "ejs": "~2.6.1",
     "eventemitter3": "^3.1.2",
-    "express": "~4.16.1",
+    "express": "~4.17.3",
     "express-ejs-layouts": "^2.5.0",
     "glob": "^7.1.4",
     "http-errors": "~1.6.3",
